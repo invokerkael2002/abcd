@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 2</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+        button{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tính lương nhân viên</h1>
+    <label>Nhập ngày công: </label><input type="text" class="ngay"><span class="errNgay"></span> <br> 
+    <label for="">Nhập lương ngày: </label><input type="text" class="luongngay"> <span class="errLuong"></span><br> 
+    <label for="">Tổng lương: </label><input type="text" class="tongluong"> <br>
+    <label for="">Xếp loại: </label><input type="text" class="xeploai"> <br>
+    <button>Tính</button>
+    </script>
+</body>
+</html>
+<script>
+var ngay = document.querySelector('.ngay')
+var luongngay = document.querySelector('.luongngay')
+var tongluong = document.querySelector('.tongluong')
+var xeploai = document.querySelector('.xeploai')
+
+const btn = document.querySelector('button')
+
+btn.addEventListener('click', (e) => {
+    let check = 1;
+    if(ngay.value > 30){
+        alert('Bạn cần nhập ngày <=30')
+        return false
+    }
+    
+    if(luongngay.value != 'GD' && luongngay.value != 'PGD' && luongngay.value != 'NV') {
+        alert('Bạn cần nhập lương GD, PGD, NV ')
+        return false;
+        
+    }
+    console.log(luongngay.value)
+    if(check == 1) {
+        
+        if (luongngay.value=='NV') 
+        {tongluong.value = Number(ngay.value)*50 }
+        else if (luongngay.value=='PGD') {tongluong.value = Number(ngay.value)*80 }
+        else {tongluong.value = Number(ngay.value) *100}
+        
+        
+        if(ngay.value >= 22) xeploai.value = 'A'
+        else if( ngay.value >= 19) xeploai.value = 'B'
+        else if(ngay.value >= 15) xeploai.value = 'C'
+        else xeploai.value = 'Không có xếp loại'
+
+    }
+    
+})
+</script>

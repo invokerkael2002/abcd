@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    }
+    
+    .flex{
+        display: flex;
+        
+    }
+    .container{
+        max-width: 1200px;
+        text-align: center;
+    }
+    .header{
+        max-width: 1200px;
+        max-height:80px;
+        margin: 0 ;
+        background-color: #8C5220;
+    }
+    .header img{
+        max-width: 80px;
+        max-height: 80px;
+        margin: 0;
+        padding: 0;
+    }
+    .header h2{
+        margin-top: 10px;
+        margin-left: 400px;
+    }
+
+    header {
+    background-color: var(--color-primary);
+    color: white;
+    }
+    .nav{
+        width: 1200px;
+    }
+    .nav>ul{
+        display: flex;
+        
+       
+    }
+    .nav ul{
+        list-style-type:none ;
+        justify-content: space-around;
+        height:30px;
+
+    }
+    .nav ul li{
+        
+        text-align: center;
+       
+        
+    }
+    .nav ul li a{
+        color: black;
+        text-decoration: none;
+        line-height: 30px;
+        background-color: aqua;
+        width: 240px;
+        padding: 0px 0;
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        display: inline-block;
+    }
+    .nav ul li a:hover{
+        background-color: #99ba13;
+    }
+    .cha{
+        position: relative;
+    }
+    .con{
+        width: 150px;
+        position: absolute;
+        padding: 8px 0px;
+        list-style: none;
+        
+        display: none;
+        
+		
+    }
+ 
+    
+    .cha:hover .con{
+        display:block;
+
+    }
+    .flex {
+    display: flex;
+    flex-direction: row;
+}
+.content-left {
+    padding: 20px;
+}
+.content-left h2 {
+    margin-bottom: 16px;
+}
+.content-center {
+    flex: 60%;
+    max-width: 60%;
+    padding: 20px;
+}
+.content-center img {
+    width: 100px;
+}
+.main-content {
+    margin: 30px 0;
+}
+.main-content h4 {
+    text-transform: capitalize;
+}
+.table-content {
+    margin: 15px 0; 
+}
+.table-content *{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+.table-content h4 {
+    background-color: blueviolet;
+}
+.footer {
+    background-color: blueviolet;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+    
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="header flex">
+            <img src="./img/logo.png" alt="">
+            <h2>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI</h2>
+        </div>
+        <div class="nav flex">
+            <ul>
+                <li><a href="">Kinh Tế</a></li>
+                <li class="cha"><a href="">Văn hóa xã hội</a>
+                    <ul class="con">
+                        <li> <a>Kinh tế 1</a></li>
+                        <li> <a>Kinh tế 2</a></li>
+                        <li> <a>Kinh tế 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Giáo dục cộng đồng</a></li>
+                <li><a href="">Học nữa học mãi</a></li>
+                <li><a href="">Vừa học vừa làm</a></li>
+            </ul>
+        </div>
+        <div class="content flex">
+            <div class="content-left item">
+                <div class="content-left__heading">
+                    <h2>Tủ sách</h2>
+                </div>
+                <div class="content-left__nav">
+                    <ul>
+                        <li><a href="#">Kinh tế</a></li>
+                        <li>
+                            <a href="#">Văn hoá xã hội</a>
+                            
+                        </li>
+                        <li><a href="#">Kinh tế 1</a></li>
+                        <li><a href="#">Kinh tế 2</a></li>
+                        <li><a href="#">Kinh tế 3</a></li>
+                        <li><a href="#">Giáo dục cộng đồng</a></li>
+                        <li><a href="#">Học nữa học mãi</a></li>
+                        <li><a href="#">Vừa học vừa làm</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-center item">
+                <div class="main-content flex">
+                    <img src="./img/logo.png">
+                    <div class="main-content__text">
+                        <h4>Mẫu tin một</h4>
+                        Thủ khoa đầu ra trường ĐH Dược Hà Nội Trịnh Thị Vân Anh không chỉ học giỏi mà còn hăng say tham gia các hoạt động có ý nghĩa cho xã hội
+                    </div>
+                </div>
+                <div class="main-content flex">
+                    <img src="./img/logo.png">
+                    <div class="main-content__text">
+                        <h4>Mẫu tin hai</h4>
+                        Thủ khoa đầu ra trường ĐH Dược Hà Nội Trịnh Thị Vân Anh không chỉ học giỏi mà còn hăng say tham gia các hoạt động có ý nghĩa cho xã hội
+                    </div>
+                </div>
+                <div class="main-content flex">
+                    <img src="./img/logo.png">
+                    <div class="main-content__text">
+                        <h4>Mẫu tin ba</h4>
+                        Thủ khoa đầu ra trường ĐH Dược Hà Nội Trịnh Thị Vân Anh không chỉ học giỏi mà còn hăng say tham gia các hoạt động có ý nghĩa cho xã hội
+                    </div>
+                </div>
+                
+            </div>
+            <div class="content-right item">
+                <div class="content-right__log">
+                    <a href="#">Đăng ký</a>
+                    <a href="#">Đăng nhập</a>
+                </div>
+                <div class="content-right__cart table-content">
+                    <h4>Giỏ hàng</h4>
+                    <p>Tổng cộng: 0 VND</p>
+                    <p>Thanh toán</p>
+                </div>
+                <div class="content-right__support table-content">
+                    <p>Hỗ trợ trực tuyến</p>
+                    <h4>Admin Web</h4>
+                </div>
+                <div class="content-right__mail table-content">
+                    <h4>Tin mới</h4>
+                    <p>Máy in Epion T6- nháy 2 đèn đỏ</p>
+                    <p>Khi dùng máy dùng dệ thống mực ngoài đỏi gặp vài sự cố </p>
+                    <p>Sửa lỗi máy in Épon T60, T50 không nhận mực</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="footer">
+            Bản quyền khoa CNTT
+        </div>
+    </div>
+</body>
+</html>
